@@ -1,0 +1,93 @@
+.footer {
+	background-color: $color-grey-dark-3;
+	padding: 10rem 0;
+	font-size: $tertiary-font-size;
+
+	@include respond(tab-port) {
+		padding: 8rem 0;
+	}
+
+	@include respond(phone) {
+		padding: 5rem 0;
+	}
+
+	&__logo-box {
+		text-align: center;
+		margin-bottom: 8rem;
+
+		@include respond(phone) {
+			margin-bottom: 5rem;
+		}
+
+	}
+
+	&__logo {
+		width: 15rem;
+		height: auto;
+	}
+
+	&__navigation {
+    border-top: 1px solid $color-grey-dark;
+		display: inline-block;
+		
+		@include respond(tab-port) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+
+		@include respond(tab-port){
+			font-size: 1.2rem;
+		}
+		
+	}
+
+	&__item {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-right: 1.5rem;
+		}
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			background-color: $color-grey-dark-3;
+			color: $color-grey-light-1;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 0.5rem;
+			backface-visibility: hidden;
+			transition: all 0.4s cubic-bezier(0.36, 0, 0.66, -0.56);
+		}
+
+		&:hover,
+		&:active {
+			color: $color-primary;
+			box-shadow: 0 1rem 2rem rgba($color-black, 0.6);
+			transform: rotate(5deg) scale(1.2);
+		}
+	}
+
+	&__copyright {
+    width: 90%;
+    float: right;
+    color: $color-grey-light-2;
+    border-top: 1px solid $color-grey-dark;
+    display: inline-block;
+    padding: 1.5rem 1rem 0;
+		letter-spacing: 1px;
+		
+		@include respond(tab-port) {
+			width: 100%;
+			float: none;
+			text-align: center;
+		}
+  }
+}

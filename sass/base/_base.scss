@@ -1,0 +1,54 @@
+/******************* GENERAL CODES *******************/
+html {
+	// this defines what 1rem is
+	font-size: 62.5%; // 1rem = 10px ==> 10px/16px = 62.5%
+
+	@include respond(big-desk){
+		font-size: 75%; // 1rem = 12px ==> 12/16 = 75%
+	};
+	
+	@include respond (tab-land){
+		font-size: 50%; // 1rem = 8px ==> 8/16 = 50%
+	};
+
+	@include respond (tab-port){
+		font-size: 45%; 
+	};
+	
+	@include respond (phone){
+		font-size: 35%; 
+	};
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	box-sizing: border-box;
+	padding: 3rem;
+
+	@include respond (tab-port){
+		padding: 0; 
+	};
+}
+
+.visually__hidden {
+	border: 0;
+	height: 1px;
+	width: 1px;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+}
+
+
+::selection{
+	background-color: $color-primary;
+	color: $color-white;
+}
